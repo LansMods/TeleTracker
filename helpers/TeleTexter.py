@@ -8,7 +8,7 @@ def send_telegram_message(bot_token, chat_id, message):
   """
     Sends a message to a specified Telegram channel.
     """
-  url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+  url = "https://api.telegram.org/bot{bot_token}/sendMessage"
   data = {"chat_id": chat_id, "text": message}
   response = requests.post(url, data=data)
   if response.json().get("ok") == True:
